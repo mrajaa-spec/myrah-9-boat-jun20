@@ -190,7 +190,8 @@ html, body {
   position: fixed;
   bottom: 4vh;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0.75);
+  transform-origin: bottom center;
   z-index: 4;
   pointer-events: none;
   transition: left 1.4s cubic-bezier(.5,0,.3,1), bottom 1.4s cubic-bezier(.5,0,.3,1);
@@ -478,7 +479,7 @@ html, body {
   font-size: clamp(72px, 16vw, 96px);
   color: var(--rose);
   line-height: 0.95;
-  margin: 4px 0;
+  margin: -8px 0 4px 0;
 }
 .date-card .month {
   font-family: 'Quicksand', sans-serif;
@@ -571,7 +572,7 @@ html, body {
 .stop .time {
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
-  font-size: clamp(8px, 1.8vw, 10px);
+  font-size: clamp(10px, 2.1vw, 12px);
   letter-spacing: 0.25em;
   color: var(--rose-gold-deep);
   text-transform: uppercase;
@@ -581,7 +582,7 @@ html, body {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-weight: 700;
-  font-size: clamp(16px, 3.4vw, 22px);
+  font-size: clamp(19px, 4vw, 26px);
   color: var(--ink);
   margin-bottom: 2px;
   line-height: 1.1;
@@ -590,7 +591,7 @@ html, body {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(10px, 2.1vw, 13px);
+  font-size: clamp(12px, 2.5vw, 16px);
   color: var(--ink-soft);
   line-height: 1.5;
 }
@@ -1060,7 +1061,7 @@ html, body {
       <div class="num">20</div>
       <div class="month">June</div>
     </div>
-    <div class="time-line">— 12:30 pm to 4:30 pm —</div>
+    <div class="time-line">— 12:20 pm to 4:30 pm —</div>
 
     <div class="programme">
       <div class="stop">
