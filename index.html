@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Myrah Turns 9 ✿ A Little Venice Adventure</title>
+<title>Myrah Turns 9 ✿ Birthday on a Boat</title>
 
 <!-- Open Graph (WhatsApp link preview) -->
-<meta property="og:title" content="Myrah Turns 9 ✿ A Little Venice Adventure">
-<meta property="og:description" content="Saturday 20 June · 11:30am – 5:30pm · A canal-boat afternoon for Myrah's birthday — sailing through Little Venice, lunch on the water &amp; lots of fun!">
+<meta property="og:title" content="Myrah Turns 9 ✿ Birthday on a Boat">
+<meta property="og:description" content="Saturday 20 June · 12:30pm – 4:30pm · A canal-boat afternoon in Little Venice for Myrah's 9th birthday — boating, cake &amp; lots of fun!">
 <meta property="og:image" content="preview.png">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -32,19 +32,40 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Rose-gold & blush palette */
-  --cream:        #fdf6ee;
-  --cream-deep:   #f7ead9;
-  --blush:        #f3d6cc;
-  --blush-deep:   #e8b8aa;
-  --rose:         #d49891;
-  --rose-gold:    #c69679;
-  --rose-gold-deep: #a87a5e;
-  --sage:         #a8b89a;
-  --sage-deep:    #7a8a6e;
-  --dusty-pink:   #d8a5a8;
-  --ink:          #5a3a3f;       /* Soft warm-brown for text */
-  --ink-soft:     #8a6970;
+  /* Watercolour Meadow palette — saturated florist tones */
+  --cream:        #fffaf0;       /* warm white */
+  --cream-deep:   #fff3e0;
+  --peach:        #ffd9c0;
+  --peach-deep:   #f0a098;
+  --sage-leaf:    #88b878;       /* warm sage */
+  --sage-deep:    #4d7c3a;
+  --butter:       #f5c860;
+  --butter-deep:  #e0a930;
+  --lilac:        #c8b8e0;
+  --lilac-deep:   #9b85c4;
+  --rose:         #d44878;       /* main heading rose pink */
+  --rose-deep:    #b02a5a;
+  --rose-soft:    #e85a85;
+  --cornflower:   #5878b8;       /* secondary accent */
+  --cornflower-deep: #3a5a98;
+  --water:        #7ab298;       /* sage water */
+  --water-deep:   #3d7858;
+  --ink:          #4a2d3d;       /* warm plum text */
+  --ink-soft:     #8a6878;
+  /* Aliases */
+  --blush:        var(--peach);
+  --blush-deep:   var(--peach-deep);
+  --rose-gold:    var(--rose);
+  --rose-gold-deep: var(--rose-deep);
+  --sage:         var(--sage-leaf);
+  --dusty-pink:   var(--lilac-deep);
+  --coral:        var(--rose);
+  --coral-deep:   var(--rose-deep);
+  --leaf:         var(--sage-leaf);
+  --leaf-deep:    var(--sage-deep);
+  --mint:         var(--sage-leaf);
+  --mint-deep:    var(--sage-leaf);
+  --peach-deep:   var(--peach-deep);
 }
 
 html, body {
@@ -64,10 +85,10 @@ html, body {
   position: fixed; inset: 0;
   z-index: 0;
   background:
-    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(243,214,204,0.55) 0%, transparent 70%),
-    radial-gradient(ellipse 80% 50% at 80% 20%, rgba(216,165,168,0.25) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 40% at 20% 30%, rgba(168,184,154,0.15) 0%, transparent 60%),
-    linear-gradient(180deg, #fef3ea 0%, #fde7dc 50%, #f8d6c8 100%);
+    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(255,200,150,0.45) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 50% at 80% 20%, rgba(220,170,230,0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 40% at 20% 30%, rgba(150,200,180,0.40) 0%, transparent 60%),
+    linear-gradient(180deg, #fff8eb 0%, #ffe0c8 50%, #f8c8c0 100%);
 }
 
 /* Subtle watercolour paper texture (CSS-only) */
@@ -89,14 +110,16 @@ html, body {
 .petal {
   position: absolute;
   width: 8px; height: 12px;
-  background: var(--blush-deep);
+  background: var(--rose-soft);
   border-radius: 50% 0 50% 0;
   opacity: 0;
   animation: drift 12s linear infinite;
   filter: blur(0.3px);
 }
-.petal.rose { background: var(--dusty-pink); }
-.petal.sage { background: var(--sage); width: 6px; height: 10px; }
+.petal.rose { background: var(--lilac-deep); }
+.petal.sage { background: var(--sage-leaf); width: 6px; height: 10px; }
+.petal.butter { background: var(--butter); }
+.petal.peach { background: var(--peach-deep); }
 @keyframes drift {
   0%   { opacity: 0; transform: translateY(-20px) translateX(0) rotate(0deg); }
   10%  { opacity: 0.55; }
@@ -118,10 +141,10 @@ html, body {
   height: 50%;
   background:
     linear-gradient(180deg,
-      rgba(168,184,154,0) 0%,
-      rgba(168,184,154,0.30) 25%,
-      rgba(122,138,110,0.55) 70%,
-      rgba(90,108,82,0.70) 100%);
+      rgba(122,178,152,0) 0%,
+      rgba(122,178,152,0.30) 25%,
+      rgba(61,120,88,0.55) 70%,
+      rgba(45,95,70,0.70) 100%);
 }
 .canal-water::before {
   /* gentle ripple lines */
@@ -165,7 +188,7 @@ html, body {
 /* GoBoat - centred, gently swaying */
 .goboat-wrap {
   position: fixed;
-  bottom: 9vh;
+  bottom: 4vh;
   left: 50%;
   transform: translateX(-50%);
   z-index: 4;
@@ -223,8 +246,8 @@ html, body {
 }
 .page.page-tall {
   justify-content: flex-start;
-  padding-top: 7vh;
-  padding-bottom: 22vh;
+  padding-top: 6vh;
+  padding-bottom: 30vh;
 }
 
 /* Soft fade overlay near bottom on tall pages so timeline reads cleanly over scenery */
@@ -232,8 +255,8 @@ html, body {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 26vh;
-  background: linear-gradient(180deg, transparent, rgba(253,246,238,0.85) 60%, rgba(253,246,238,0.95));
+  height: 32vh;
+  background: linear-gradient(180deg, transparent, rgba(255,232,213,0.85) 50%, rgba(248,200,192,0.92));
   pointer-events: none;
   z-index: -1;
   opacity: 0;
@@ -267,9 +290,10 @@ html, body {
   animation: fadeUp 1.0s 0.7s forwards;
 }
 .cover .name {
-  font-family: 'Caveat', cursive;
-  font-weight: 700;
-  font-size: clamp(110px, 24vw, 180px);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(72px, 17vw, 130px);
   line-height: 0.95;
   color: var(--rose-gold);
   margin-bottom: 1vh;
@@ -288,9 +312,10 @@ html, body {
   animation: fadeUp 1.0s 1.9s forwards;
 }
 .cover .nine {
-  font-family: 'Caveat', cursive;
-  font-weight: 700;
-  font-size: clamp(96px, 22vw, 150px);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(64px, 16vw, 112px);
   color: var(--rose);
   line-height: 1;
   margin: -1vh 0 1vh;
@@ -394,13 +419,14 @@ html, body {
   margin-bottom: 1.5vh;
 }
 .page-title {
-  font-family: 'Caveat', cursive;
-  font-weight: 700;
-  font-size: clamp(56px, 13vw, 92px);
-  color: var(--rose-gold);
-  line-height: 1.0;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(38px, 9vw, 64px);
+  color: var(--rose);
+  line-height: 1.1;
   margin-bottom: 2vh;
-  text-shadow: 0 3px 14px rgba(198,150,121,0.18);
+  text-shadow: 0 3px 14px rgba(212,72,120,0.12);
 }
 .flourish {
   width: 55%;
@@ -446,7 +472,8 @@ html, body {
   text-transform: uppercase;
 }
 .date-card .num {
-  font-family: 'Caveat', cursive;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
   font-weight: 700;
   font-size: clamp(72px, 16vw, 96px);
   color: var(--rose);
@@ -544,16 +571,17 @@ html, body {
 .stop .time {
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
-  font-size: clamp(11px, 2.4vw, 13px);
+  font-size: clamp(8px, 1.8vw, 10px);
   letter-spacing: 0.25em;
   color: var(--rose-gold-deep);
   text-transform: uppercase;
   margin-bottom: 4px;
 }
 .stop .heading {
-  font-family: 'Caveat', cursive;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
   font-weight: 700;
-  font-size: clamp(22px, 4.6vw, 30px);
+  font-size: clamp(16px, 3.4vw, 22px);
   color: var(--ink);
   margin-bottom: 2px;
   line-height: 1.1;
@@ -562,7 +590,7 @@ html, body {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(14px, 2.9vw, 18px);
+  font-size: clamp(10px, 2.1vw, 13px);
   color: var(--ink-soft);
   line-height: 1.5;
 }
@@ -621,7 +649,8 @@ html, body {
 }
 .signoff {
   margin-top: 3vh;
-  font-family: 'Caveat', cursive;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
   font-weight: 700;
   font-size: clamp(30px, 6.5vw, 46px);
   color: var(--rose-gold);
@@ -742,24 +771,24 @@ html, body {
     <svg class="willow-svg" viewBox="0 0 220 400" preserveAspectRatio="xMinYMax meet">
       <!-- Trunk -->
       <path d="M30 0 Q 40 50, 35 120 Q 30 200, 38 300 Q 42 360, 50 400 L 65 400 Q 60 350, 55 280 Q 50 180, 60 90 Q 70 30, 90 0 Z"
-            fill="#8a6a4f" opacity="0.45"/>
+            fill="#8a6a4f" opacity="0.4"/>
       <!-- Drooping watercolour foliage clusters -->
-      <g opacity="0.7">
-        <ellipse cx="55" cy="70" rx="60" ry="35" fill="#a8b89a"/>
-        <ellipse cx="80" cy="110" rx="75" ry="40" fill="#b5c4a5"/>
-        <ellipse cx="50" cy="160" rx="65" ry="42" fill="#9eaf8e"/>
-        <ellipse cx="90" cy="200" rx="78" ry="50" fill="#aebd9e"/>
-        <ellipse cx="60" cy="245" rx="70" ry="48" fill="#a3b395"/>
+      <g opacity="0.75">
+        <ellipse cx="55" cy="70" rx="60" ry="35" fill="#88b878"/>
+        <ellipse cx="80" cy="110" rx="75" ry="40" fill="#a8c898"/>
+        <ellipse cx="50" cy="160" rx="65" ry="42" fill="#6a9858"/>
+        <ellipse cx="90" cy="200" rx="78" ry="50" fill="#9bc880"/>
+        <ellipse cx="60" cy="245" rx="70" ry="48" fill="#88b878"/>
       </g>
       <!-- Drooping branches -->
-      <g stroke="#9eaf8e" stroke-width="1.2" fill="none" opacity="0.55">
+      <g stroke="#4d7c3a" stroke-width="1.2" fill="none" opacity="0.55">
         <path d="M65 90 Q 70 130, 72 180 Q 73 230, 70 280"/>
         <path d="M85 110 Q 92 150, 95 200 Q 98 260, 92 310"/>
         <path d="M105 130 Q 108 170, 110 220 Q 113 270, 108 320"/>
         <path d="M40 100 Q 38 145, 40 195 Q 42 250, 38 300"/>
       </g>
       <!-- Tiny willow leaves dotted on the branches -->
-      <g fill="#7a8a6e" opacity="0.6">
+      <g fill="#4d7c3a" opacity="0.65">
         <ellipse cx="68" cy="160" rx="2" ry="6"/>
         <ellipse cx="92" cy="180" rx="2" ry="6"/>
         <ellipse cx="111" cy="200" rx="2" ry="6"/>
@@ -774,20 +803,20 @@ html, body {
   <!-- Right willow (mirrored) -->
   <div class="willow-right">
     <svg class="willow-svg" viewBox="0 0 220 400" preserveAspectRatio="xMinYMax meet">
-      <path d="M30 0 Q 40 50, 35 120 Q 30 200, 38 300 Q 42 360, 50 400 L 65 400 Q 60 350, 55 280 Q 50 180, 60 90 Q 70 30, 90 0 Z" fill="#8a6a4f" opacity="0.45"/>
-      <g opacity="0.7">
-        <ellipse cx="55" cy="70" rx="60" ry="35" fill="#a8b89a"/>
-        <ellipse cx="80" cy="110" rx="75" ry="40" fill="#b5c4a5"/>
-        <ellipse cx="50" cy="160" rx="65" ry="42" fill="#9eaf8e"/>
-        <ellipse cx="90" cy="200" rx="78" ry="50" fill="#aebd9e"/>
-        <ellipse cx="60" cy="245" rx="70" ry="48" fill="#a3b395"/>
+      <path d="M30 0 Q 40 50, 35 120 Q 30 200, 38 300 Q 42 360, 50 400 L 65 400 Q 60 350, 55 280 Q 50 180, 60 90 Q 70 30, 90 0 Z" fill="#8a6a4f" opacity="0.4"/>
+      <g opacity="0.75">
+        <ellipse cx="55" cy="70" rx="60" ry="35" fill="#88b878"/>
+        <ellipse cx="80" cy="110" rx="75" ry="40" fill="#a8c898"/>
+        <ellipse cx="50" cy="160" rx="65" ry="42" fill="#6a9858"/>
+        <ellipse cx="90" cy="200" rx="78" ry="50" fill="#9bc880"/>
+        <ellipse cx="60" cy="245" rx="70" ry="48" fill="#88b878"/>
       </g>
-      <g stroke="#9eaf8e" stroke-width="1.2" fill="none" opacity="0.55">
+      <g stroke="#4d7c3a" stroke-width="1.2" fill="none" opacity="0.55">
         <path d="M65 90 Q 70 130, 72 180 Q 73 230, 70 280"/>
         <path d="M85 110 Q 92 150, 95 200 Q 98 260, 92 310"/>
         <path d="M105 130 Q 108 170, 110 220 Q 113 270, 108 320"/>
       </g>
-      <g fill="#7a8a6e" opacity="0.6">
+      <g fill="#4d7c3a" opacity="0.65">
         <ellipse cx="68" cy="160" rx="2" ry="6"/>
         <ellipse cx="92" cy="180" rx="2" ry="6"/>
         <ellipse cx="73" cy="240" rx="2" ry="6"/>
@@ -798,64 +827,133 @@ html, body {
   <div class="canal-water"></div>
 </div>
 
-<!-- GoBoat illustration — round, with cream canopy and cake table -->
+<!-- Canal narrowboat illustration -->
 <div class="goboat-wrap" id="goboat">
   <div class="goboat-sway">
-    <svg width="220" height="130" viewBox="0 0 220 130">
-      <!-- canopy striped -->
+    <svg width="340" height="180" viewBox="0 0 360 200">
       <defs>
-        <pattern id="stripe" x="0" y="0" width="10" height="20" patternUnits="userSpaceOnUse">
-          <rect width="10" height="20" fill="#fdf6ee"/>
-          <rect x="5" width="5" height="20" fill="#f3d6cc"/>
-        </pattern>
+        <linearGradient id="hull-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3a2530"/>
+          <stop offset="100%" stop-color="#1a0e15"/>
+        </linearGradient>
+        <linearGradient id="cabin-side" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#d44878"/>
+          <stop offset="100%" stop-color="#b02a5a"/>
+        </linearGradient>
       </defs>
-      
-      <!-- Canopy -->
-      <ellipse cx="110" cy="35" rx="60" ry="14" fill="url(#stripe)" stroke="#c69679" stroke-width="0.8"/>
-      <!-- Canopy poles -->
-      <line x1="55" y1="40" x2="55" y2="65" stroke="#a87a5e" stroke-width="1.5"/>
-      <line x1="165" y1="40" x2="165" y2="65" stroke="#a87a5e" stroke-width="1.5"/>
-      <line x1="110" y1="44" x2="110" y2="68" stroke="#a87a5e" stroke-width="1.5" opacity="0.6"/>
-      
-      <!-- Cake on the centre table -->
-      <ellipse cx="110" cy="68" rx="14" ry="3" fill="#a87a5e" opacity="0.5"/>
-      <rect x="100" y="58" width="20" height="10" fill="#fdf6ee" stroke="#d49891" stroke-width="0.6" rx="1"/>
-      <rect x="103" y="51" width="14" height="8" fill="#f3d6cc" stroke="#d49891" stroke-width="0.6" rx="1"/>
-      <line x1="110" y1="48" x2="110" y2="51" stroke="#a87a5e" stroke-width="1"/>
-      <circle cx="110" cy="46" r="1.5" fill="#e8b8aa"/>
-      
-      <!-- Boat hull (round GoBoat shape) -->
-      <ellipse cx="110" cy="85" rx="78" ry="22" fill="#fdf6ee" stroke="#a87a5e" stroke-width="1.5"/>
-      <!-- Wood grain band -->
-      <path d="M 35 88 Q 110 100, 185 88" fill="none" stroke="#c69679" stroke-width="0.8" opacity="0.5"/>
-      <path d="M 38 92 Q 110 104, 182 92" fill="none" stroke="#c69679" stroke-width="0.6" opacity="0.4"/>
-      
-      <!-- Bow flowers -->
-      <circle cx="40" cy="78" r="3" fill="#d49891"/>
-      <circle cx="44" cy="74" r="2.5" fill="#e8b8aa"/>
-      <circle cx="180" cy="78" r="3" fill="#d49891"/>
-      <circle cx="176" cy="74" r="2.5" fill="#e8b8aa"/>
-      <ellipse cx="36" cy="80" rx="2" ry="3" fill="#a8b89a"/>
-      <ellipse cx="184" cy="80" rx="2" ry="3" fill="#a8b89a"/>
-      
-      <!-- Bunting flags (party!) -->
-      <g stroke="#a87a5e" stroke-width="0.8" fill="none">
-        <path d="M 45 35 Q 110 22, 175 35"/>
+
+      <!-- WATER reflection lines (back) -->
+      <path d="M 5 178 Q 90 184, 180 180 Q 270 184, 355 178"
+            fill="none" stroke="#fffaf0" stroke-width="1" opacity="0.5"/>
+
+      <!-- HULL — long, low, with rounded bow (left) and squarer stern (right) -->
+      <path d="M 30 115
+               Q 18 115, 18 128
+               L 18 150
+               Q 18 165, 35 168
+               L 325 168
+               Q 335 168, 338 160
+               L 338 128
+               Q 338 115, 326 115
+               Z"
+            fill="url(#hull-grad)" stroke="#1a0e15" stroke-width="1.2"/>
+
+      <!-- Hull rubrail / gunwale stripe -->
+      <rect x="20" y="118" width="316" height="5" fill="#5878b8" opacity="0.85"/>
+      <rect x="20" y="125" width="316" height="2" fill="#f5c860"/>
+
+      <!-- Waterline shadow -->
+      <path d="M 22 162 Q 180 166, 336 162" fill="none" stroke="#5d3a4a" stroke-width="0.6" opacity="0.5"/>
+
+      <!-- CABIN — raised roof running most of the length -->
+      <rect x="50" y="70" width="240" height="50" fill="url(#cabin-side)" stroke="#7d1a3e" stroke-width="1"/>
+
+      <!-- Cabin roof (flat top with slight curve) -->
+      <path d="M 48 70 Q 170 64, 292 70 L 292 74 Q 170 68, 48 74 Z" fill="#4d7c3a" stroke="#2d5a1f" stroke-width="0.8"/>
+
+      <!-- Decorative panel borders -->
+      <rect x="50" y="70" width="240" height="6" fill="#fffaf0" opacity="0.4"/>
+      <rect x="50" y="114" width="240" height="6" fill="#5878b8" opacity="0.7"/>
+
+      <!-- WINDOWS — row of rectangular portholes along the cabin side -->
+      <g>
+        <rect x="62"  y="84" width="22" height="20" fill="#fffaf0" stroke="#7d1a3e" stroke-width="1" rx="2"/>
+        <rect x="92"  y="84" width="22" height="20" fill="#fffaf0" stroke="#7d1a3e" stroke-width="1" rx="2"/>
+        <rect x="122" y="84" width="22" height="20" fill="#fffaf0" stroke="#7d1a3e" stroke-width="1" rx="2"/>
+        <rect x="152" y="84" width="22" height="20" fill="#fffaf0" stroke="#7d1a3e" stroke-width="1" rx="2"/>
+        <rect x="182" y="84" width="22" height="20" fill="#fffaf0" stroke="#7d1a3e" stroke-width="1" rx="2"/>
+        <rect x="212" y="84" width="22" height="20" fill="#fffaf0" stroke="#7d1a3e" stroke-width="1" rx="2"/>
+        <rect x="242" y="84" width="22" height="20" fill="#fffaf0" stroke="#7d1a3e" stroke-width="1" rx="2"/>
+        <!-- subtle glass reflection -->
+        <g opacity="0.4">
+          <rect x="64" y="86" width="6" height="16" fill="#c8e0f5"/>
+          <rect x="94" y="86" width="6" height="16" fill="#c8e0f5"/>
+          <rect x="124" y="86" width="6" height="16" fill="#c8e0f5"/>
+          <rect x="154" y="86" width="6" height="16" fill="#c8e0f5"/>
+          <rect x="184" y="86" width="6" height="16" fill="#c8e0f5"/>
+          <rect x="214" y="86" width="6" height="16" fill="#c8e0f5"/>
+          <rect x="244" y="86" width="6" height="16" fill="#c8e0f5"/>
+        </g>
+      </g>
+
+      <!-- CHIMNEY (brass-look) with a wisp of smoke -->
+      <rect x="100" y="54" width="8" height="16" fill="#5d3a2e" stroke="#3a2818" stroke-width="0.6"/>
+      <rect x="98" y="52" width="12" height="4" fill="#7d5a3e" stroke="#3a2818" stroke-width="0.5"/>
+      <path d="M 104 52 Q 108 44, 104 38 Q 100 32, 106 26" fill="none" stroke="#9d9d9d" stroke-width="1.4" opacity="0.55"/>
+
+      <!-- FLOWER POTS on the roof -->
+      <g>
+        <rect x="220" y="62" width="10" height="8" fill="#a8743a" stroke="#5d3a2e" stroke-width="0.5"/>
+        <circle cx="222" cy="60" r="3" fill="#d44878"/>
+        <circle cx="228" cy="60" r="2.5" fill="#f5c860"/>
+        <circle cx="225" cy="57" r="2.5" fill="#c8b8e0"/>
+        <ellipse cx="225" cy="62" rx="3" ry="1.5" fill="#88b878" opacity="0.7"/>
       </g>
       <g>
-        <path d="M 60 30 L 64 38 L 56 38 Z" fill="#d49891"/>
-        <path d="M 80 27 L 84 35 L 76 35 Z" fill="#a8b89a"/>
-        <path d="M 100 25 L 104 33 L 96 33 Z" fill="#f3d6cc"/>
-        <path d="M 120 25 L 124 33 L 116 33 Z" fill="#d49891"/>
-        <path d="M 140 27 L 144 35 L 136 35 Z" fill="#a8b89a"/>
-        <path d="M 160 30 L 164 38 L 156 38 Z" fill="#f3d6cc"/>
+        <rect x="250" y="62" width="10" height="8" fill="#a8743a" stroke="#5d3a2e" stroke-width="0.5"/>
+        <circle cx="252" cy="60" r="2.5" fill="#88b878"/>
+        <circle cx="258" cy="60" r="3" fill="#d44878"/>
+        <circle cx="255" cy="57" r="2.2" fill="#f5c860"/>
       </g>
-      
-      <!-- Wake / water ripple under boat -->
-      <path d="M 25 110 Q 60 116, 110 113 Q 160 116, 195 110" 
-            fill="none" stroke="#fdf6ee" stroke-width="1.2" opacity="0.7"/>
-      <path d="M 35 118 Q 75 124, 110 121 Q 145 124, 185 118" 
-            fill="none" stroke="#fdf6ee" stroke-width="1" opacity="0.5"/>
+
+      <!-- BOW deck (left, open) — small rope coil and birthday bunting -->
+      <path d="M 18 115 Q 30 110, 50 110 L 50 120 L 18 120 Z" fill="#5d3a2e" stroke="#3a2818" stroke-width="0.8"/>
+      <circle cx="36" cy="113" r="2.5" fill="none" stroke="#fffaf0" stroke-width="0.8"/>
+
+      <!-- STERN deck (right, open) with traditional tiller -->
+      <path d="M 290 115 L 338 115 L 338 120 L 290 120 Z" fill="#5d3a2e" stroke="#3a2818" stroke-width="0.8"/>
+      <!-- Tiller arm curving back -->
+      <path d="M 332 100 Q 348 105, 350 120" fill="none" stroke="#3a2818" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="332" cy="100" r="2" fill="#3a2818"/>
+
+      <!-- BUNTING strung from cabin roof to bow and stern -->
+      <g stroke="#b02a5a" stroke-width="0.8" fill="none">
+        <path d="M 25 105 Q 50 88, 78 76"/>
+        <path d="M 282 76 Q 310 88, 335 105"/>
+      </g>
+      <g>
+        <!-- bow side bunting flags -->
+        <path d="M 32 102 L 36 108 L 28 108 Z" fill="#d44878"/>
+        <path d="M 45 95 L 49 101 L 41 101 Z" fill="#88b878"/>
+        <path d="M 58 87 L 62 93 L 54 93 Z" fill="#f5c860"/>
+        <path d="M 70 80 L 74 86 L 66 86 Z" fill="#c8b8e0"/>
+        <!-- stern side bunting flags -->
+        <path d="M 290 80 L 294 86 L 286 86 Z" fill="#5878b8"/>
+        <path d="M 302 87 L 306 93 L 298 93 Z" fill="#d44878"/>
+        <path d="M 315 95 L 319 101 L 311 101 Z" fill="#f5c860"/>
+        <path d="M 328 102 L 332 108 L 324 108 Z" fill="#88b878"/>
+      </g>
+
+      <!-- Decorative painted name panel on the side -->
+      <rect x="160" y="108" width="40" height="10" fill="#f5c860" stroke="#7d1a3e" stroke-width="0.6" rx="1"/>
+      <text x="180" y="116" font-family="Playfair Display, serif" font-style="italic" font-size="8" font-weight="700" fill="#7d1a3e" text-anchor="middle">Myrah</text>
+
+      <!-- WATER REFLECTION & WAKE (front) -->
+      <ellipse cx="180" cy="172" rx="140" ry="3" fill="#3a2530" opacity="0.18"/>
+      <path d="M 10 184 Q 90 190, 180 186 Q 270 190, 350 184"
+            fill="none" stroke="#fffaf0" stroke-width="1.3" opacity="0.7"/>
+      <path d="M 25 194 Q 100 198, 180 195 Q 260 198, 335 194"
+            fill="none" stroke="#fffaf0" stroke-width="1" opacity="0.5"/>
     </svg>
   </div>
 </div>
@@ -866,62 +964,62 @@ html, body {
     <!-- Soft watercolour bloom cluster -->
     <g opacity="0.85">
       <!-- Main rose -->
-      <circle cx="22" cy="22" r="9" fill="#d49891" opacity="0.45"/>
-      <circle cx="22" cy="22" r="6" fill="#d49891" opacity="0.7"/>
-      <circle cx="20" cy="20" r="2.5" fill="#a87a5e" opacity="0.6"/>
+      <circle cx="22" cy="22" r="9" fill="#d44878" opacity="0.45"/>
+      <circle cx="22" cy="22" r="6" fill="#d44878" opacity="0.7"/>
+      <circle cx="20" cy="20" r="2.5" fill="#b02a5a" opacity="0.6"/>
       <!-- Buds -->
-      <circle cx="42" cy="18" r="4" fill="#e8b8aa" opacity="0.8"/>
-      <circle cx="14" cy="40" r="3.5" fill="#f3d6cc" opacity="0.85"/>
-      <circle cx="38" cy="38" r="3" fill="#d8a5a8" opacity="0.7"/>
+      <circle cx="42" cy="18" r="4" fill="#f5c860" opacity="0.8"/>
+      <circle cx="14" cy="40" r="3.5" fill="#c8b8e0" opacity="0.85"/>
+      <circle cx="38" cy="38" r="3" fill="#ffd9c0" opacity="0.7"/>
       <!-- Sage leaves -->
-      <ellipse cx="48" cy="28" rx="6" ry="2.5" fill="#a8b89a" opacity="0.6" transform="rotate(30 48 28)"/>
-      <ellipse cx="10" cy="28" rx="5" ry="2" fill="#a8b89a" opacity="0.6" transform="rotate(-20 10 28)"/>
-      <ellipse cx="32" cy="48" rx="6" ry="2.5" fill="#9eaf8e" opacity="0.55" transform="rotate(60 32 48)"/>
+      <ellipse cx="48" cy="28" rx="6" ry="2.5" fill="#88b878" opacity="0.6" transform="rotate(30 48 28)"/>
+      <ellipse cx="10" cy="28" rx="5" ry="2" fill="#88b878" opacity="0.6" transform="rotate(-20 10 28)"/>
+      <ellipse cx="32" cy="48" rx="6" ry="2.5" fill="#4d7c3a" opacity="0.55" transform="rotate(60 32 48)"/>
       <!-- Tiny gold dots -->
-      <circle cx="28" cy="32" r="1" fill="#c69679"/>
-      <circle cx="44" cy="42" r="1" fill="#c69679"/>
-      <circle cx="18" cy="48" r="0.8" fill="#c69679"/>
+      <circle cx="28" cy="32" r="1" fill="#e0a930"/>
+      <circle cx="44" cy="42" r="1" fill="#e0a930"/>
+      <circle cx="18" cy="48" r="0.8" fill="#e0a930"/>
     </g>
   </svg>
 </div>
 <div class="corner-flower tr">
   <svg viewBox="0 0 100 100">
     <g opacity="0.85">
-      <circle cx="22" cy="22" r="9" fill="#d49891" opacity="0.45"/>
-      <circle cx="22" cy="22" r="6" fill="#d49891" opacity="0.7"/>
-      <circle cx="20" cy="20" r="2.5" fill="#a87a5e" opacity="0.6"/>
-      <circle cx="42" cy="18" r="4" fill="#e8b8aa" opacity="0.8"/>
-      <circle cx="14" cy="40" r="3.5" fill="#f3d6cc" opacity="0.85"/>
-      <circle cx="38" cy="38" r="3" fill="#d8a5a8" opacity="0.7"/>
-      <ellipse cx="48" cy="28" rx="6" ry="2.5" fill="#a8b89a" opacity="0.6" transform="rotate(30 48 28)"/>
-      <ellipse cx="10" cy="28" rx="5" ry="2" fill="#a8b89a" opacity="0.6" transform="rotate(-20 10 28)"/>
-      <ellipse cx="32" cy="48" rx="6" ry="2.5" fill="#9eaf8e" opacity="0.55" transform="rotate(60 32 48)"/>
-      <circle cx="28" cy="32" r="1" fill="#c69679"/>
-      <circle cx="44" cy="42" r="1" fill="#c69679"/>
+      <circle cx="22" cy="22" r="9" fill="#d44878" opacity="0.45"/>
+      <circle cx="22" cy="22" r="6" fill="#d44878" opacity="0.7"/>
+      <circle cx="20" cy="20" r="2.5" fill="#b02a5a" opacity="0.6"/>
+      <circle cx="42" cy="18" r="4" fill="#f5c860" opacity="0.8"/>
+      <circle cx="14" cy="40" r="3.5" fill="#c8b8e0" opacity="0.85"/>
+      <circle cx="38" cy="38" r="3" fill="#ffd9c0" opacity="0.7"/>
+      <ellipse cx="48" cy="28" rx="6" ry="2.5" fill="#88b878" opacity="0.6" transform="rotate(30 48 28)"/>
+      <ellipse cx="10" cy="28" rx="5" ry="2" fill="#88b878" opacity="0.6" transform="rotate(-20 10 28)"/>
+      <ellipse cx="32" cy="48" rx="6" ry="2.5" fill="#4d7c3a" opacity="0.55" transform="rotate(60 32 48)"/>
+      <circle cx="28" cy="32" r="1" fill="#e0a930"/>
+      <circle cx="44" cy="42" r="1" fill="#e0a930"/>
     </g>
   </svg>
 </div>
 <div class="corner-flower bl">
   <svg viewBox="0 0 100 100">
     <g opacity="0.8">
-      <circle cx="22" cy="22" r="9" fill="#d49891" opacity="0.45"/>
-      <circle cx="22" cy="22" r="6" fill="#d49891" opacity="0.7"/>
-      <circle cx="20" cy="20" r="2.5" fill="#a87a5e" opacity="0.6"/>
-      <circle cx="42" cy="18" r="4" fill="#e8b8aa" opacity="0.8"/>
-      <ellipse cx="48" cy="28" rx="6" ry="2.5" fill="#a8b89a" opacity="0.6" transform="rotate(30 48 28)"/>
-      <ellipse cx="32" cy="48" rx="6" ry="2.5" fill="#9eaf8e" opacity="0.55" transform="rotate(60 32 48)"/>
+      <circle cx="22" cy="22" r="9" fill="#d44878" opacity="0.45"/>
+      <circle cx="22" cy="22" r="6" fill="#d44878" opacity="0.7"/>
+      <circle cx="20" cy="20" r="2.5" fill="#b02a5a" opacity="0.6"/>
+      <circle cx="42" cy="18" r="4" fill="#f5c860" opacity="0.8"/>
+      <ellipse cx="48" cy="28" rx="6" ry="2.5" fill="#88b878" opacity="0.6" transform="rotate(30 48 28)"/>
+      <ellipse cx="32" cy="48" rx="6" ry="2.5" fill="#4d7c3a" opacity="0.55" transform="rotate(60 32 48)"/>
     </g>
   </svg>
 </div>
 <div class="corner-flower br">
   <svg viewBox="0 0 100 100">
     <g opacity="0.8">
-      <circle cx="22" cy="22" r="9" fill="#d49891" opacity="0.45"/>
-      <circle cx="22" cy="22" r="6" fill="#d49891" opacity="0.7"/>
-      <circle cx="20" cy="20" r="2.5" fill="#a87a5e" opacity="0.6"/>
-      <circle cx="42" cy="18" r="4" fill="#e8b8aa" opacity="0.8"/>
-      <ellipse cx="48" cy="28" rx="6" ry="2.5" fill="#a8b89a" opacity="0.6" transform="rotate(30 48 28)"/>
-      <ellipse cx="32" cy="48" rx="6" ry="2.5" fill="#9eaf8e" opacity="0.55" transform="rotate(60 32 48)"/>
+      <circle cx="22" cy="22" r="9" fill="#d44878" opacity="0.45"/>
+      <circle cx="22" cy="22" r="6" fill="#d44878" opacity="0.7"/>
+      <circle cx="20" cy="20" r="2.5" fill="#b02a5a" opacity="0.6"/>
+      <circle cx="42" cy="18" r="4" fill="#f5c860" opacity="0.8"/>
+      <ellipse cx="48" cy="28" rx="6" ry="2.5" fill="#88b878" opacity="0.6" transform="rotate(30 48 28)"/>
+      <ellipse cx="32" cy="48" rx="6" ry="2.5" fill="#4d7c3a" opacity="0.55" transform="rotate(60 32 48)"/>
     </g>
   </svg>
 </div>
@@ -951,102 +1049,48 @@ html, body {
     <button class="open-btn" id="openBtn">Open The Invitation</button>
   </section>
 
-  <!-- PAGE 2 — THE PARTY -->
-  <section class="page" data-page="1">
+  <!-- PAGE 2 — THE PARTY + THE PLAN (merged) -->
+  <section class="page page-tall" data-page="1">
     <div class="page-eyebrow">The Party</div>
-    <h2 class="page-title">A Little Venice<br>Adventure</h2>
+    <h2 class="page-title">Birthday<br>on a Boat</h2>
     <div class="flourish"><div class="line"></div><div class="star">✿</div><div class="line"></div></div>
-    
-    <div class="theme-list">
-      Sailing the canal aboard a GoBoat<br>
-      <span class="pip">✿</span> Lunch on the water with the girls <span class="pip">✿</span><br>
-      Cake, sparkling toasts &amp; lots of fun!
-    </div>
 
     <div class="date-card">
       <div class="day">Saturday</div>
       <div class="num">20</div>
       <div class="month">June</div>
     </div>
-    <div class="time-line">— 11:30 am to 5:30 pm —</div>
-  </section>
-
-  <!-- PAGE 3 — THE PROGRAMME -->
-  <section class="page page-tall" data-page="2">
-    <div class="page-eyebrow">Our Day</div>
-    <h2 class="page-title">The Plan</h2>
-    <div class="flourish"><div class="line"></div><div class="star">✿</div><div class="line"></div></div>
+    <div class="time-line">— 12:30 pm to 4:30 pm —</div>
 
     <div class="programme">
       <div class="stop">
         <div class="marker"><div class="dot"></div><div class="vline"></div></div>
         <div class="body">
-          <div class="time">11 : 30 AM</div>
-          <div class="heading">Drop off at Coleherne Court</div>
-          <div class="desc">The girls arrive — bags down, gifts in, off we go!</div>
+          <div class="time">12 : 20 PM</div>
+          <div class="heading">Drop off at Paddington GoBoat</div>
+          <div class="desc">Merchant Square, Paddington Basin, W2 1AS</div>
         </div>
       </div>
       <div class="stop">
         <div class="marker"><div class="dot"></div><div class="vline"></div></div>
         <div class="body">
-          <div class="time">12 : 00 PM</div>
-          <div class="heading">Tube to Paddington</div>
-          <div class="desc">A little Tube adventure across town on the District Line.</div>
-        </div>
-      </div>
-      <div class="stop">
-        <div class="marker"><div class="dot"></div><div class="vline"></div></div>
-        <div class="body">
-          <div class="time">12 : 30 PM</div>
-          <div class="heading">All aboard at Little Venice!</div>
-          <div class="desc">GoBoat check-in &amp; setting sail along the Regent's Canal.</div>
-        </div>
-      </div>
-      <div class="stop">
-        <div class="marker"><div class="dot"></div><div class="vline"></div></div>
-        <div class="body">
-          <div class="time">1 : 00 PM</div>
-          <div class="heading">Fun on the water</div>
-          <div class="desc">Games, music &amp; sailing through Maida Hill Tunnel.</div>
-        </div>
-      </div>
-      <div class="stop">
-        <div class="marker"><div class="dot"></div><div class="vline"></div></div>
-        <div class="body">
-          <div class="time">1 : 30 PM</div>
-          <div class="heading">Lunch on the canal</div>
-          <div class="desc">A canal-side picnic afloat — what a way to dine!</div>
-        </div>
-      </div>
-      <div class="stop">
-        <div class="marker"><div class="dot"></div><div class="vline"></div></div>
-        <div class="body">
-          <div class="time">2 : 15 PM</div>
-          <div class="heading">More fun &amp; sailing back</div>
-          <div class="desc">Photos, giggles &amp; gentle drifting back to the dock.</div>
-        </div>
-      </div>
-      <div class="stop">
-        <div class="marker"><div class="dot"></div><div class="vline"></div></div>
-        <div class="body">
-          <div class="time">3 : 15 PM</div>
-          <div class="heading">Tube home</div>
-          <div class="desc">Back across town, full of sunshine and stories.</div>
+          <div class="heading">Boating &amp; fun</div>
+          <div class="desc">Two GoBoats &middot; two grown-ups in each &middot; boating instructions start at 12:30pm sharp</div>
         </div>
       </div>
       <div class="stop">
         <div class="marker"><div class="dot"></div></div>
         <div class="body">
-          <div class="time">4 : 00 PM</div>
-          <div class="heading">Cake, toasts &amp; presents</div>
-          <div class="desc">Birthday cake, "champagne" toasts &amp; gift-opening at home — pickup at 4:30 pm.</div>
+          <div class="time">4 : 30 PM</div>
+          <div class="heading">Cake &amp; pick-up at Coleherne Court</div>
+          <div class="desc">Block H, Flat 64</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PAGE 4 — RSVP -->
-  <section class="page" data-page="3">
+  <!-- PAGE 3 — RSVP -->
+  <section class="page" data-page="2">
     <div class="page-eyebrow">With Love</div>
     <h2 class="page-title">Do Say Yes!</h2>
     <div class="flourish"><div class="line"></div><div class="star">✿</div><div class="line"></div></div>
@@ -1054,27 +1098,12 @@ html, body {
     <div class="rsvp-card">
       <div class="rsvp-line">
         Myrah would <em>love</em> to have you join her for an<br>
-        afternoon of canal sailing, sunshine &amp;<br>
-        nine years of magic on the water.
+        afternoon of canal sailing &amp; sunshine.
       </div>
 
       <div class="rsvp-detail">
         <div class="rsvp-label">Kindly RSVP by</div>
-        <div class="rsvp-value">Saturday, 6 June</div>
-      </div>
-
-      <div class="rsvp-detail">
-        <div class="rsvp-label">Drop-off</div>
-        <div class="rsvp-value address">Coleherne Court · 11:30 am</div>
-      </div>
-
-      <div class="rsvp-detail">
-        <div class="rsvp-label">Pick-up</div>
-        <div class="rsvp-value address">Coleherne Court · 4:30 pm</div>
-      </div>
-
-      <div class="dress-line">
-        Comfy &amp; bright — bring a sun hat, a light jumper &amp; trainers for the Tube!
+        <div class="rsvp-value">Wednesday, 10 June</div>
       </div>
 
       <div class="signoff">— love, Myrah ✿</div>
@@ -1090,8 +1119,7 @@ html, body {
 <div class="nav-dots shown-after-open" id="navDots">
   <button class="dot active" data-go="0" aria-label="Cover"></button>
   <button class="dot" data-go="1" aria-label="The Party"></button>
-  <button class="dot" data-go="2" aria-label="The Plan"></button>
-  <button class="dot" data-go="3" aria-label="RSVP"></button>
+  <button class="dot" data-go="2" aria-label="RSVP"></button>
 </div>
 
 <!-- ═══════ MUSIC ═══════ -->
@@ -1117,7 +1145,7 @@ html, body {
 
   // ── Floating petals ──
   const PETAL_COUNT = 18;
-  const petalClasses = ['', 'rose', 'sage'];
+  const petalClasses = ['', 'rose', 'sage', 'butter', 'peach'];
   for (let i = 0; i < PETAL_COUNT; i++) {
     const p = document.createElement('div');
     p.className = 'petal ' + petalClasses[Math.floor(Math.random() * petalClasses.length)];
@@ -1129,7 +1157,8 @@ html, body {
 
   // ── Navigation ──
   function setBoatPosition(idx) {
-    const positions = ['50%', '32%', '68%', '50%'];
+    // Boat travels left → right across the journey (positions tuned to stay on-screen)
+    const positions = ['30%', '55%', '78%'];
     goboat.style.left = positions[idx] || '50%';
   }
   function goTo(idx) {
